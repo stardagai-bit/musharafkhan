@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مدرسہ انوار العلوم | Madrasa Anwar ul Alom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Noto Nastaliq Urdu', serif; margin: 0; background: #f2f2f2; }
+        header, footer { background: green; color: white; text-align: center; padding: 20px; }
+        nav { background: #004d00; text-align: center; padding: 10px; }
+        nav a {
+            color: white; text-decoration: none; margin: 0 10px;
+            font-weight: bold; font-size: 18px;
+        }
+        nav a:hover { text-decoration: underline; }
+        section { max-width: 900px; margin: auto; background: white; padding: 30px; margin-top: 20px; border-radius: 10px; }
+        h2 { text-align: center; margin-bottom: 20px; }
+        p { font-size: 18px; line-height: 1.6; }
+        ul { font-size: 18px; }
+        form { display: flex; flex-direction: column; gap: 10px; }
+        label { font-weight: bold; }
+        input, textarea, select {
+            padding: 8px; font-size: 16px; width: 100%;
+        }
+        button {
+            background: green; color: white; padding: 10px;
+            font-size: 16px; border: none; cursor: pointer;
+        }
+        .preview { border: 2px dashed #aaa; padding: 20px; margin-top: 20px; background: #fff; }
+        .a4 {
+            width: 794px; height: 1123px;
+            background: white; padding: 40px;
+            margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        @media print {
+            body * { visibility: hidden; }
+            .a4, .a4 * { visibility: visible; }
+            .a4 { position: absolute; top: 0; left: 0; }
+            button { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مدرسہ انوار العلوم</h1>
+    <p>Madrasa Anwar ul Alom - Totalai Sambal | فون: 03434796063 | Email: Star.dagai@gmail.com</p>
+</header>
+
+<nav>
+    <a href="#home">ہوم</a>
+    <a href="#admission">داخلہ فارم</a>
+    <a href="#classes">کلاسز</a>
+    <a href="#library">کتب خانہ</a>
+    <a href="#results">نتائج</a>
+    <a href="#contact">رابطہ</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+    <h2>خوش آمدید</h2>
+    <p>مدرسہ انوار العلوم، ٹوٹالئی سمبل، ایک دینی و عصری تعلیم کا ادارہ ہے جہاں کلاس 1 سے 10 تک تعلیم دی جاتی ہے۔ ہمارا مقصد بچوں کو اسلامی تعلیم کے ساتھ ساتھ جدید تعلیم بھی فراہم کرنا ہے۔</p>
+</section>
+
+<!-- Admission Form Section -->
+<section id="admission">
+    <h2>داخلہ فارم</h2>
+    <form id="admissionForm">
+        <label>طالب علم کا نام:</label>
+        <input type="text" name="name" required>
+        <label>والد کا نام:</label>
+        <input type="text" name="father" required>
+        <label>تاریخ پیدائش:</label>
+        <input type="date" name="dob" required>
+        <label>پچھلی تعلیم:</label>
+        <input type="text" name="education" required>
+        <label>جماعت منتخب کریں:</label>
+        <select name="class" required>
+            <option>Class 1</option><option>Class 2</option>
+            <option>Class 3</option><option>Class 4</option>
+            <option>Class 5</option><option>Class 6</option>
+            <option>Class 7</option><option>Class 8</option>
+            <option>Class 9</option><option>Class 10</option>
+        </select>
+        <label>پتہ:</label>
+        <textarea name="address" required></textarea>
+        <label>فون نمبر:</label>
+        <input type="text" name="phone" required>
+        <button type="button" onclick="showPreview()">پیش نظارہ</button>
+        <div class="preview" id="previewSection" style="display:none;">
+            <div class="a4" id="a4PreviewContent"></div>
+            <button type="submit">فارم جمع کریں</button>
+        </div>
+    </form>
+</section>
+
+<!-- Classes Section -->
+<section id="classes">
+    <h2>کلاسز کی معلومات</h2>
+    <ul>
+        <li>Class 1 - بنیادی تعلیم</li>
+        <li>Class 2-3 - قرآن ناظرہ اور اردو</li>
+        <li>Class 4-5 - دینی و عصری مضامین</li>
+        <li>Class 6-8 - تجوید، فقہ، ریاضی</li>
+        <li>Class 9-10 - حدیث، تفسیر، سائنس، انگلش</li>
+    </ul>
+</section>
+
+<!-- Library Section -->
+<section id="library">
+    <h2>کتب خانہ</h2>
+    <p>ہمارے کتب خانہ میں اسلامی، سائنسی اور نصابی کتابیں موجود ہیں جو طلبہ مفت استعمال کر سکتے ہیں۔ جلد ہی آن لائن بُک ریکارڈ بھی شامل کیا جائے گا۔</p>
+</section>
+
+<!-- Results Section -->
+<section id="results">
+    <h2>نتائج</h2>
+    <p>سالانہ و ششماہی امتحانات کے نتائج اس سیکشن میں اپلوڈ کیے جائیں گے۔</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>رابطہ کریں</h2>
+    <p>📍 پتہ: ٹوٹالئی، ضلع بونیر، خیبر پختونخوا</p>
+    <p>📞 فون: 0343-4796063</p>
+    <p>📧 ای میل: Star.dagai@gmail.com</p>
+</section>
+
+<footer>
+    &copy; 2025 مدرسہ انوار العلوم | تمام حقوق محفوظ ہیں
+</footer>
+
+<script>
+    function showPreview() {
+        const form = document.getElementById("admissionForm");
+        const preview = document.getElementById("previewSection");
+        const data = new FormData(form);
+        const html = `
+            <h3>داخلہ فارم کا پیش نظارہ</h3>
+            <p><strong>نام:</strong> ${data.get("name")}</p>
+            <p><strong>والد کا نام:</strong> ${data.get("father")}</p>
+            <p><strong>تاریخ پیدائش:</strong> ${data.get("dob")}</p>
+            <p><strong>پچھلی تعلیم:</strong> ${data.get("education")}</p>
+            <p><strong>جماعت:</strong> ${data.get("class")}</p>
+            <p><strong>پتہ:</strong> ${data.get("address")}</p>
+            <p><strong>فون نمبر:</strong> ${data.get("phone")}</p>
+        `;
+        document.getElementById("a4PreviewContent").innerHTML = html;
+        preview.style.display = "block";
+    }
+
+    document.getElementById("admissionForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("فارم کامیابی سے جمع ہو گیا!");
+        this.reset();
+        document.getElementById("previewSection").style.display = "none";
+    });
+</script>
+
+</body>
+</html>
